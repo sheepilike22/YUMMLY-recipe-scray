@@ -28,14 +28,14 @@ class RecipeSpider(scrapy.Spider):
                   for i in range(930)]
 
     def parse(self, response):
-        step.append(1)
         item = RecipeItem()  # Creating a new Item object
-        item['name'] = recipe["recipeLink"][sum(step)]
+        item['name'] = response.xpath("//h1/text()").extract()[0]
         item['fat'] = response.css(".micro-text ::text").extract()[16]
         item['protein'] = response.css(".micro-text ::text").extract()[18]
         item['carb'] = response.css(".micro-text ::text").extract()[20]
         item['calories'] = response.css(".nutrition-bubble-flat-value .font-light ::text").extract()[0]
-        # print(sum(step))
+        step.append(1)
+        print(sum(step))
         yield item
 
         detail.append(item)

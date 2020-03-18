@@ -22,13 +22,12 @@ recipe_list['carb'] = recipe_list['carb'].apply(lambda x: re.sub('<1', '0.5', x)
 # drop problem data
 recipe_list = recipe_list.sort_values(['carb'])
 recipe_list = recipe_list.drop(index=[450, 122, 688, 803, 120])
-# create id
-recipe_list['id'] = recipe_list['name'].apply(lambda x: x[::-1])  # 取後7碼，先反轉字串
-recipe_list['id'] = recipe_list['id'].apply(lambda x: x[:7])  # 取前7
-recipe_list['id'] = recipe_list['id'].apply(lambda x: x[::-1])  # 恢復順序
+# # create id
+# recipe_list['id'] = recipe_list['name'].apply(lambda x: x[::-1])  # 取後7碼，先反轉字串
+# recipe_list['id'] = recipe_list['id'].apply(lambda x: x[:7])  # 取前7
+# recipe_list['id'] = recipe_list['id'].apply(lambda x: x[::-1])  # 恢復順序
 # organize the name
 recipe_list['name'] = recipe_list['name'].apply(lambda x: x[7:])
-recipe_list['name'] = recipe_list['name'].apply(lambda x: x[0:-8])
 
 recipe_list = recipe_list.drop_duplicates()  # delete duplicate rows
 recipe_list = recipe_list[recipe_list.calories != 0 ]   # remove 0 calories
