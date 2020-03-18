@@ -1,0 +1,18 @@
+#ignore file
+README.txt
+download.txt
+
+#ignore folder name 'images'
+images
+
+#ignore the file in the folder 'recipe_crawl'
+recipe_crawl/test.csv
+recipe_crawl/test1.csv
+recipe_crawl/test2.csv
+recipe_crawl/test3.csv
+recipe_crawl/test4.csv
+recipe_crawl/test5.csv
+recipe_crawl/test6.csv
+recipe_crawl/test7.csv
+recipe_crawl/test8.csv
+recipe_crawl/test9.csv
