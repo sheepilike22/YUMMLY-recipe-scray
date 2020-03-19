@@ -40,7 +40,7 @@ class RecipeSpider(scrapy.Spider):
 
         detail.append(item)
 
-        if sum(step) == 929:
+        if sum(step) == 856:   # according to sum(step)
             print("Detail=" + str(detail))
             Detail = pd.DataFrame(detail, columns=['name', 'fat', 'protein', 'carb', 'calories'])
             Detail.to_csv('C://ntut//code//web_crawling//recipe_crawl//recipe_nutrient.csv', encoding='utf_8_sig', index=False)

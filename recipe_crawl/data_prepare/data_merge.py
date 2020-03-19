@@ -17,6 +17,21 @@ data9 = pd.read_csv('C://ntut//code//web_crawling//recipe_crawl//test9.csv')
 # 使用 concat 合併 axis=0 為直向合併
 dataSet = pd.concat([data, data1, data2, data3, data4, data5, data6, data7, data8, data9], axis=0)
 #print(data)
+dataSet = dataSet.drop_duplicates()
+# 檢查資料
+a = dataSet.recipeName.to_list()
+seen = set()
+duplicated = set()
+for x in a:
+    if x not in seen:
+        seen.add(x)
+    else:
+        duplicated.add(x)
+
+repeat = list(duplicated)
+date_unique = dataSet[~dataSet.recipeName.isin(repeat)]
+date_repeat = dataSet[dataSet.recipeName.isin(repeat)]
 
 # 輸出
-dataSet.to_csv('C://ntut//code//web_crawling//recipe_crawl//recipe.csv', encoding='utf_8_sig', index=False)
+date_unique.to_csv('C://ntut//code//web_crawling//recipe_crawl//recipe_unique.csv', encoding='utf_8_sig', index=False)
+date_repeat.to_csv('C://ntut//code//web_crawling//recipe_crawl//recipe_repeat.csv', encoding='utf_8_sig', index=False)
