@@ -3,15 +3,7 @@ README.txt
 download.txt
 
 #ignore folder
-images
-
-#ignore folder
-images_1/*
-images_2/*
-images_3/*
-images_4/*
-images_5/*
-images_6/*
+image
 
 #ignore the file in the folder 'recipe_crawl'
 recipe_crawl/test.csv
