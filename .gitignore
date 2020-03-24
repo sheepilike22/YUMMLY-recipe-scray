@@ -4,6 +4,12 @@ download.txt
 
 #ignore folder name 'images'
 images
+images_1
+images_2
+images_3
+images_4
+images_5
+images_6
 
 #ignore the file in the folder 'recipe_crawl'
 recipe_crawl/test.csv
@@ -16,3 +22,9 @@ recipe_crawl/test6.csv
 recipe_crawl/test7.csv
 recipe_crawl/test8.csv
 recipe_crawl/test9.csv
+recipe_crawl/recipe_list_1.csv
+recipe_crawl/recipe_list_2.csv
+recipe_crawl/recipe_list_3.csv
+recipe_crawl/recipe_list_4.csv
+recipe_crawl/recipe_list_5.csv
+recipe_crawl/recipe_list_6.csv

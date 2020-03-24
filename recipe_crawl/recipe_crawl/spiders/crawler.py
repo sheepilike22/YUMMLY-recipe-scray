@@ -42,9 +42,10 @@ tracking_id_List = []
 name_List = []
 url_List = []
 click_count_List = []
+
 # 不能範圍太大
 # # 0~49 test
-# for i in range(50):
+# for i in range(50
 #     tracking_id = data["feed"][i]["tracking-id"]
 #     name = data["feed"][i]["display"]["displayName"]
 #     url = data["feed"][i]["display"]["images"][0]
