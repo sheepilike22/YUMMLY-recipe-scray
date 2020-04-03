@@ -53,15 +53,6 @@ recipe_list = recipe_list.drop(columns=['index'])
 recipe_list['recipeName'] = recipe_list['recipeLink'].apply(lambda x: x[7:])
 
 
-recipe_list = pd.DataFrame({'recipeName': recipe_list.recipeName,
-                            'recipeLink': recipe_list.recipeLink,
-                            'name': recipe_list.name,
-                            'calories': recipe_list.calories,
-                            'fat': recipe_list.fat,
-                            'protein': recipe_list.protein,
-                            'carb': recipe_list.carb,
-                            'imgURL': recipe_list.recipeUrl,
-                            'click_count': recipe_list.click_count})
 
 recipe_list = recipe_list.drop_duplicates()
 recipe_list.to_csv('C://ntut//code//web_crawling//recipe_crawl//recipe_list.csv', encoding='utf_8_sig', index=False)
